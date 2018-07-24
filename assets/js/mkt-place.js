@@ -1,7 +1,7 @@
 var $ = jQuery;
 
 $(document).ready(function (e) {
-    var headerMenu = $('.hotsite__mkt-place');
+    var headerMenu = $('.topo__mkt-place');
 
 
     // Coloca os dados do html dentro de uma variável
@@ -25,8 +25,8 @@ $(document).ready(function (e) {
         return data.hasOwnProperty('links') && data.links != '' && data.links != ' ' ? `<div class="container-fluid menu" style="background-color:${data.backgroundMenu ? data.backgroundMenu : '#ddd'};">
             <div class="row">
                 <div class="container">
-                    <div class="offset-md-3 offset-lg-2">
-                        <div class="menu__content align-items-center d-flex flex-column flex-wrap flex-sm-row">
+                    <div class="offset-md-4 offset-lg-3">
+                        <div class="menu__content align-items-stretch d-flex flex-column flex-wrap flex-sm-row">
                             ${menuLinks(headerMenu.data('links'))}
                         </div>
                     </div>
@@ -45,12 +45,12 @@ $(document).ready(function (e) {
     </div>
     <div class="container">
         <div class="row justify-content-start align-items-center box__empresa">
-            <div class="col-12 col-sm-3 col-lg-2 align-items-center">
+            <div class="col-12 col-sm-4 col-lg-3 align-items-center">
                 <div class="empresa__img d-flex p-2 shadow-sm mx-auto">
                     <img class="align-self-center img-fluid mx-auto" src="${data.empresaImg}" alt="${data.nomeEmpresa}">
                 </div>
             </div>
-            <div class="col-12 col-sm-9 col-lg-10">
+            <div class="col-12 col-sm-8 col-lg-9">
                 <div class="empresa_text">
                     <h2>${data.nomeEmpresa}</h2>
                     <p>${data.textoEmpresa}
@@ -61,9 +61,6 @@ $(document).ready(function (e) {
     </div>
     ${hasLinks(headerMenu.data())}
     `)
-
-
-
     // Adiciona a estrutura no topo do mkt place
     headerMenu.append(estrutura)
     

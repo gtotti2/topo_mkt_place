@@ -6,9 +6,10 @@ $(document).ready(function (e) {
 
     // Coloca os dados do html dentro de uma variável
     var data = headerMenu.data()
-
-    // Coloca o background color na section
-    headerMenu.css('background-color', data.background ? data.background : '#ccc')
+    console.log(data.background.split('#').length)
+    console.log(data.background)
+    data.background.split('#').length == 2 || data.background.length == 0  ? headerMenu.css('background-color', data.background ? data.background : '#ccc') : headerMenu.css('background-image', `url('${data.background}')`);
+    
     // Adiciona a classe do tema
     headerMenu.addClass(data.tema)
 

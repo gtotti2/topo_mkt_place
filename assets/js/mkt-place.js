@@ -49,7 +49,7 @@ $(document).ready(function (e) {
     <div class="container ${conditionsHasMenu ? 'hasMenu' : 'noMenu'}">
         <div class="row justify-content-start box__empresa">
             <div class="col-12 col-sm-12 col-lg-3 align-self-center align-items-center">
-                <div class="empresa__img d-flex p-2 shadow-sm mx-auto" style="background-color:${data.backgroundLogo ? data.backgroundLogo : '#fff'}">
+                <div class="empresa__img d-flex p-2 shadow-sm mx-auto" style="background-color:${data.backgroundMenu ? data.backgroundMenu : '#ddd'};">
                     <img class="align-self-center img-fluid mx-auto" src="${data.empresaImg}" alt="${data.nomeEmpresa}">
                 </div>
             </div>

@@ -9,7 +9,7 @@ $(document).ready(function (e) {
     const conditionsHasMenu = data.hasOwnProperty('links') && data.links != '' && data.links != ' '
 
     data.background.split('#').length == 2 || data.background.length == 0  ? headerMenu.css('background-color', data.background ? data.background : '#ccc') : headerMenu.css('background', `url('${data.background}') center top / cover no-repeat scroll`);
-    
+    console.log(data)
     // Adiciona a classe do tema
     headerMenu.addClass(data.tema)
 
@@ -23,7 +23,7 @@ $(document).ready(function (e) {
     }
     // Função para verificar se existe links para serem adicionados na estrutura
     function hasLinks(data) {
-        return conditionsHasMenu ? `<div class="container-fluid menu" style="background-color:${data.backgroundMenu ? data.backgroundMenu : '#ddd'};">
+        return conditionsHasMenu ? `<div class="container-fluid menu" style="background-color:${data.backgroundMenu ? data.backgroundMenu : '#ddd'}">
             <div class="row">
                 <div class="container">
                     <div class="offset-md-2 offset-lg-3">
@@ -39,7 +39,7 @@ $(document).ready(function (e) {
     }
 
     var estrutura = $(`
-    <div class="container-fluid">
+    <div class="container">
         <div class="row justify-content-end">
             <div class="saraiva_mkt-place">
                 <img src="./assets/img/logo_mktplace-saraiva@1X.png" alt="">
@@ -49,7 +49,7 @@ $(document).ready(function (e) {
     <div class="container ${conditionsHasMenu ? 'hasMenu' : 'noMenu'}">
         <div class="row justify-content-start box__empresa">
             <div class="col-12 col-sm-12 col-lg-3 align-self-center align-items-center">
-                <div class="empresa__img d-flex p-2 shadow-sm mx-auto">
+                <div class="empresa__img d-flex p-2 shadow-sm mx-auto" style="background-color:${data.backgroundLogo ? data.backgroundLogo : '#fff'}">
                     <img class="align-self-center img-fluid mx-auto" src="${data.empresaImg}" alt="${data.nomeEmpresa}">
                 </div>
             </div>

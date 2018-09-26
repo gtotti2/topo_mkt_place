@@ -1,0 +1,279 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.topo__mkt-place {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+    color: #fff;
+    background: url(../img/bg_topo.png) no-repeat scroll top center;
+    background-blend-mode: overlay;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    max-height: 190px;
+    margin-bottom: 15px;
+}
+
+.topo__mkt-place.dark {
+    color: #fff;
+}
+
+.topo__mkt-place.dark {
+    color: #000;
+}
+
+.topo__mkt-place.light h1 {
+    color: #fff;
+}
+
+.topo__mkt-place.light p {
+    color: #fff;
+}
+
+.topo__mkt-place.dark .saraiva_mkt-place img {
+    filter: brightness(0);
+}
+
+.topo__mkt-place .saraiva_mkt-place {
+    padding: 10px 20px;
+}
+
+.empresa__img {
+    background: #fff;
+    max-width: 164px;
+    height: 164px;
+    position: relative;
+    top: 0px;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.empresa__img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.topo__mkt-place .empresa_text {
+    margin-bottom: 20px;
+}
+
+.topo__mkt-place .empresa_text h1 {
+    font-size: 33px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    display: inline-block;
+}
+
+.topo__mkt-place .empresa_text h1+a {
+    top: -5px;
+    position: relative;
+    padding: 6px 12px;
+    color: #000;
+    font-size: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.topo__mkt-place .empresa_text h1+a:hover {
+    background: rgba(0, 0, 0, .15);
+}
+
+.topo__mkt-place.light .empresa_text h1+a {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+}
+
+.topo__mkt-place.light .empresa_text h1+a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.topo__mkt-place .empresa_text p {
+    font-size: 1em;
+    font-weight: 100;
+    margin-top: -10px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.menu {
+    background-color: #e94d28;
+    bottom: 62px;
+    position: relative;
+    z-index: 1;
+    overflow: auto;
+}
+
+.menu__content {
+    min-height: 44px;
+}
+
+.menu__content>ul {
+    padding: 0;
+    margin: 0;
+}
+
+.menu__content>ul>li {
+    margin: 7px 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-family: 'WorkSans', sans-serif;
+    transition: .3s;
+    text-align: center;
+    padding: 7px 20px;
+    display: inline-block;
+}
+
+.menu__content>ul>li>a {
+    color: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.menu__content>ul>li:hover {
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+}
+
+.box__empresa {
+    position: relative
+}
+
+.hasMenu .empresa_text {
+    margin-top: -57px;
+}
+
+.mktp-modal-info-seller {
+    padding: 15px 15px 30px 15px
+}
+
+.mktp-modal-info-seller h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 15px
+}
+
+.mktp-modal-info-seller p, .mktp-modal-info-seller #product-view .product-store-disp a span, #product-view .product-store-disp a .mktp-modal-info-seller span {
+    margin-bottom: 10px
+}
+
+.mktp-modal-info-seller h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600
+}
+
+.mktp-modal-info-seller ul {
+    margin-left: 20px;
+    margin-bottom: 15px
+}
+
+.mktp-modal-info-seller ul li {
+    line-height: 1.2;
+    font-size: 14px;
+    list-style: square;
+    margin-bottom: 10px
+}
+
+.mktp-modal-info-seller .block {
+    display: block;
+    margin-top: 20px;
+    clear: both
+}
+
+.mktp-modal-info-seller .logo {
+    width: 150px;
+    height: 150px;
+    margin-right: 15px;
+    float: left;
+    display: flex;
+    align-items: center
+}
+
+.mktp-modal-info-seller .logo img {
+    width: 100%;
+    height: auto
+}
+
+@media (max-width: 1024px) {
+    .empresa_text h1 {
+        font-size: 25px;
+    }
+    .empresa_text p {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .col-main {
+        padding: 40px 0px;
+    }
+    .topo__mkt-place .empresa_text h1+a {
+        display: block;
+        max-width: 180px;
+        margin: 0px auto 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .topo__mkt-place {
+        max-height: 100%;
+    }
+    .box__empresa {
+        max-height: 100%;
+        text-align: center;
+    }
+    .saraiva_mkt-place {
+        width: 100%;
+        text-align: -webkit-center;
+    }
+    .menu {
+        position: relative;
+        bottom: 0;
+    }
+    .hasMenu .empresa_text {
+        margin-top: 0;
+    }
+    .topo__mkt-place .empresa_text h1 {
+        font-size: 28px;
+        font-weight: 600;
+        margin: 17px 0;
+        display: inline-block;
+    }
+    .menu__content {
+        overflow: auto;
+        width: 1360px;
+    }
+    .empresa__img {
+        left: 0;
+        max-width: 106px;
+        height: 106px;
+    }
+    .topo__mkt-place {
+        margin: 40px 0px 15px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .topo__mkt-place .saraiva_mkt-place {
+        text-align: -webkit-center;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    .menu__content>div {
+        margin: 5px 10px 5px 0px;
+    }
+}

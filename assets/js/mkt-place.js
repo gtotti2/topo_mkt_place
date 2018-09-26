@@ -4,7 +4,7 @@ $(document).ready(function (e) {
     var headerMenu = $('.topo__mkt-place');
 
 
-    // Coloca os dados do html dentro de uma variÃ¡vel
+    // Coloca os dados do html dentro de uma variÃƒÂ¡vel
     var data = headerMenu.data()
     const conditionsHasMenu = data.hasOwnProperty('links') && data.links != '' && data.links != ' '
 
@@ -13,7 +13,7 @@ $(document).ready(function (e) {
     // Adiciona a classe do tema
     headerMenu.addClass(data.tema)
 
-    // FunÃ§Ã£o para adicionar os links no menu
+    // FunÃƒÂ§ÃƒÂ£o para adicionar os links no menu
     function menuLinks(links) {
         let content = '';
         typeof (links) == 'object' ? links.forEach(link => {
@@ -21,7 +21,7 @@ $(document).ready(function (e) {
         }) : content += `${links}`
         return content
     }
-    // FunÃ§Ã£o para verificar se existe links para serem adicionados na estrutura
+    // FunÃƒÂ§ÃƒÂ£o para verificar se existe links para serem adicionados na estrutura
     function hasLinks(data) {
         return conditionsHasMenu ? `<div class="container-fluid menu" style="background-color:${data.backgroundMenu ? data.backgroundMenu : '#ddd'};">
             <div class="row">
@@ -56,8 +56,8 @@ $(document).ready(function (e) {
             <div class="col-12 col-sm-12 col-lg-9 align-self-center">
                 <div class="empresa_text">
                     <h1>${data.nomeEmpresa}</h1>
-                    <p>${data.textoEmpresa}
-                    </p>
+                    <a onclick="marketplace.openModalSellerInfo($('button').attr('data-sellerid'))" href="#">Políticas de venda e troca</a>
+                    <p>${data.textoEmpresa}</p>
                 </div>
             </div>
         </div>
@@ -66,12 +66,5 @@ $(document).ready(function (e) {
     `)
     // Adiciona a estrutura no topo do mkt place
     headerMenu.append(estrutura)
-    
-    // $('.menu__content div > a').hover(
-    //     function () {
-    //         $(this).css("color", data.textColorMenu);
-    //     }, function () {
-    //         $(this).css("color", data.textColorMenu);
-    //     })
 
 })

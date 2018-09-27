@@ -13,7 +13,14 @@ $(document).ready(function (e) {
     // Adiciona a classe do tema
     headerMenu.addClass(data.tema)
 
-    // FunÃƒÂ§ÃƒÂ£o para adicionar os links no menu
+    // Function to restrict qty of characters
+
+    function limitOfCharacters(content, limit){
+        return content.length > limit ? content.substr(0,limit).concat('...') : content
+    }
+
+
+    // Function para adicionar os links no menu
     function menuLinks(links) {
         let content = '';
         typeof (links) == 'object' ? links.forEach(link => {
@@ -56,8 +63,8 @@ $(document).ready(function (e) {
             <div class="col-12 col-sm-12 col-lg-9 align-self-center">
                 <div class="empresa_text">
                     <h1>${data.nomeEmpresa}</h1>
+                    <p>${limitOfCharacters(data.textoEmpresa, 180)}</p>
                     <a onclick="marketplace.openModalSellerInfo($('button').attr('data-sellerid'))" href="#">Políticas de venda e troca</a>
-                    <p>${data.textoEmpresa}</p>
                 </div>
             </div>
         </div>

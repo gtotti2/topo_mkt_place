@@ -65,10 +65,10 @@ body {
     font-weight: 600;
     letter-spacing: 0.2px;
     display: inline-block;
+    margin-bottom: 10px;
 }
 
-.topo__mkt-place .empresa_text h1+a {
-    top: -7px;
+.topo__mkt-place .empresa_text a {
     position: relative;
     padding: 6px 12px;
     color: #000;
@@ -79,29 +79,29 @@ body {
     font-weight: 400;
     display: inline-block;
     text-align: center;
-    margin: 10px;
+    margin: 0px 0px 10px;
     border: 1px solid #000;
     background: rgba(0, 0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0.6);
 }
 
-.topo__mkt-place .empresa_text h1+a:hover {
+.topo__mkt-place .empresa_text a:hover {
     background: rgba(0, 0, 0, .15);
 }
 
-.topo__mkt-place.light .empresa_text h1+a {
+.topo__mkt-place.light .empresa_text a {
     border: 1px solid rgba(255, 255, 255, 0.6);
     color: #fff;
 }
 
-.topo__mkt-place.light .empresa_text h1+a:hover {
+.topo__mkt-place.light .empresa_text a:hover {
     background: rgba(255, 255, 255, 0.15);
 }
 
 .topo__mkt-place .empresa_text p {
     font-size: 1em;
     font-weight: 100;
-    margin-top: -10px;
+    margin-top: 0px;
     line-height: 20px;
     margin-bottom: 10px;
 }
@@ -220,7 +220,7 @@ body {
     .col-main {
         padding: 40px 0px;
     }
-    .topo__mkt-place .empresa_text h1+a {
+    .topo__mkt-place .empresa_text a {
         display: block;
         max-width: 180px;
         margin: 0px auto 20px;

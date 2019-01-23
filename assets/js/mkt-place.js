@@ -64,7 +64,7 @@ $(document).ready(function (e) {
                 <div class="empresa_text">
                     <h1>${data.nomeEmpresa}</h1>
                     <p>${limitOfCharacters(data.textoEmpresa, 180)}</p>
-                    <a onclick="marketplace.openModalSellerInfo($('button').attr('data-sellerid'))" href="#">Políticas de venda e troca</a>
+                    <a onclick="marketplace.openModalSellerInfo($('.topo__mkt-place').attr('data-sellerid'))" href="#">Políticas de venda e troca</a>
                 </div>
             </div>
         </div>
